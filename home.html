@@ -16,7 +16,7 @@
     <header class="header" id="header">
       <nav class="nav container">
         <a href="" class="nav__logo">
-          <img src="img/dsu logo.png" alt="logo image" />DSU Halloween
+          <img src="img/dsu logo.png" alt="logo image" />Judian Mystery
         </a>
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
@@ -25,7 +25,7 @@
             </li>
 
             <li class="nav__item">
-              <a href="#about" class="nav__link">About us</a>
+              <a href="#about" class="nav__link">About</a>
             </li>
 
             <li class="nav__item">
@@ -50,8 +50,8 @@
         <div class="home__container container grid">
           <div class="home__data">
             <h1 class="home__title">
-              <span>Halloween</span>
-              <span class="Deez">Trick Or Treat</span>
+              <span>the Judian Mystery</span>
+              <span class="Deez">Murder, Mayheim, and Merry</span>
               <img
                 src="img/stars1.png"
                 alt="home image"
@@ -64,23 +64,23 @@
               />
             </h1>
             <p class="home__description">
-              This Halloween, enjoy trick-or-treating with your friends and
-              spend a terrifying night under the full moon.
+              This November, enjoy solving a mystery with strangers and
+              spend a terrifying night under the waning crescent moon.
             </p>
-            <a href="#items" class="button">Venture</a>
+            <!-- <a href="#items" class="button">Venture</a> -->
           </div>
           <img
-            src="img/jack o lantern.png"
+            src="img/Rosary-Beads.png"
             alt="home image"
             class="home__img floating-imgs"
           />
           <img
-            src="img/skeleton.png"
+            src="img/Bloody_Knife.png"
             alt="home image"
             class="home__tree-1 mobile"
           />
           <img
-            src="img/model22.png"
+            src="img/body-chalk-outline.png"
             alt="home image"
             class="home__tree-2 mobile"
           />
@@ -96,33 +96,47 @@
               of Terror
             </h2>
             <p class="about__description">
-              Halloween is celebrated every October 31 at night, walk around the
-              city with your friends and trick or treat, enjoy this celebration
-              under the full moon!
+              Monotony and ice tea, in the town of Jasper, Georgia, everything and everyone prays to Gold, God and Glory. One road, one school, one church.
+              From the plush community of Bent Tree to the Pauper’s Home of Pickens County, all congregate at the Mountain View Community Church to give thanks. That is, until, one glorious Sunday, the town people bow their head in prayer and unravel the mystery in their wake. 
+
             </p>
-            <a href="#category" class="button">Know More</a>
+            <!-- <a href="#category" class="button">Know More</a> -->
           </div>
-          <img src="img/ghost.png" alt="about image" class="about__img" />
+          <img src="img/Steampunk_Hat.png" alt="about image" class="about__img mobile" />
         </div>
       </section>
-      <section id="category" class="category section">
+      <section id="items" class="category section">
         <div class="shape__small"></div>
         <h2 class="section__title">
           Choose your <br />
-          Spooky Category
+          Role Category
         </h2>
         <div class="category__container container grid">
           <div class="category__card">
             <img
-              src="img/pum.png"
+              src="img/actor.png"
               alt="category image"
               class="category__img floating-imgs"
             />
-            <h3 class="category__title">Pumpkins</h3>
+            <h3 class="category__title">Performer</h3>
             <p class="category__description">
-              Light up horror pumpkins to scare at night!
+              Light up the room by acting out as a character!
             </p>
             <img src="img/stars.png" alt="" class="category__star" />
+            <button class="items__button" onclick="openPopup({value: 'Performer'})" value="Performer">Register</button>
+          </div>
+          <div class="category__card">
+            <img
+              src="img/jury.png"
+              alt="category image"
+              class="category__img floating-imgs"
+            />
+            <h3 class="category__title">Jury</h3>
+            <p class="category__description">
+              No role but able to question and interrogate the performers during interrogation.
+            </p>
+            <img src="img/stars.png" alt="" class="category__star" />
+            <button class="items__button" onclick="openPopup({value: 'Jury'})" value="Jury">Register</button>
           </div>
           <div class="category__card">
             <img
@@ -132,25 +146,80 @@
             />
             <h3 class="category__title">Ghost</h3>
             <p class="category__description">
-              Spooky ghosts to scare in the most haunted houses!
+              A non-participant watching the event unfold.
             </p>
             <img src="img/stars.png" alt="" class="category__star" />
-          </div>
-          <div class="category__card">
-            <img
-              src="img/witchhat.png"
-              alt="category image"
-              class="category__img floating-imgs"
-            />
-            <h3 class="category__title">Witch Hat</h3>
-            <p class="category__description">
-              The most elegant witch hats you can wear and scare!
-            </p>
-            <img src="img/stars.png" alt="" class="category__star" />
+            <button class="items__button" onclick="openPopup({value: 'Ghost'})" value="Ghost">Register</button>
           </div>
         </div>
       </section>
-      <section class="items section" id="items">
+      <div class="popup-overlay" id="popupOverlay">
+        <div class="popup" id="popup">
+          <span class="close" id="closePopup">&times;</span>
+          <div class="popup-content">
+              <p>Welcome to our website!</p>
+              <p>Sign up to receive exclusive offers:</p>
+              <label for="email"><b>Name</b></label>
+              <input type="text" placeholder="Enter First and Last Name" name="email" required id="emailInput"> <br/>
+              
+              <label for="role"><b>Desired Role</b></label>
+              <input type="text" id="desiredRoleInput" disabled required > <br/><br/>
+
+              <label for="role"><b>RSVP for Nov 16th?</b></label> <br/>
+              <div>
+                <input type="radio" id="yesRadio1" name="drone1" value="yes" checked />
+                <label for="yesRadio">Yes</label>
+              </div>
+
+              <div>
+                <input type="radio" id="noRadio1" name="drone1" value="no" />
+                <label for="noRadio">No</label>
+              </div>
+              <br/>
+
+              <label for="role"><b>Food Accomodations</b></label>
+              <p>Would you rather...</p>
+              <div>
+                <input type="radio" id="yesRadio3" name="food" value="restaurant"/>
+                <label for="yesRadio">Order a-la-carte from restaurant menu</label>
+              </div>
+              
+              <div>
+                <input type="radio" id="noRadio3" name="food" value="potluck"/>
+                <label for="noRadio">Participate in a potluck</label>
+              </div>
+
+              <br/>
+              
+              <label for="role"><b>Wish to Receive a Physical Invitation?</b></label>
+              <div>
+                <input type="radio" id="yesRadio2" name="drone2" value="yes" onclick="toggleDiv()"/>
+                <label for="yesRadio">Yes</label>
+              </div>
+
+              <div>
+                <input type="radio" id="noRadio2" name="drone2" value="no" onclick="toggleDiv()"/>
+                <label for="noRadio">No</label>
+              </div>
+              <br/>
+
+              <div id="myDiv" style="display: none;">
+                Enter your full address so I can send you a letter with the physical invitation. <br/>
+                If not comfortable, select No and I will text you the invite.
+                <input type="text" placeholder="Home Address" name="address" id="emailInput">
+              </div>
+              
+              <br/>
+
+              <label for="email"><b>Any additional comments</b></label>
+              <input type="text" placeholder="Enter comments" name="comments" id="emailInput"> <br/>
+
+
+              <button onclick="submitForm()">Sign Up</button>
+          </div>
+        </div>
+      </div>
+      <!-- <section class="items section" id="items">
         <div class="shape__big"></div>
         <h2 class="section__title">
           Select your <br />
@@ -218,7 +287,7 @@
             <button class="items__button">Buy Now</button>
           </article>
         </div>
-      </section>
+      </section> -->
     </main>
     <footer class="footer section">
       <div class="footer__container container grid">
@@ -226,18 +295,17 @@
         <div class="shape__big"></div>
         <div>
           <a href="" class="footer__logo">
-            <img src="img/dsu logo.png" alt="logo image" />Halloween
+            <img src="img/dsu logo.png" alt="logo image" />Judian Mystery
           </a>
           <p class="footer__description">
-            Enjoy the spookiest <br />
-            night at DSU!
+            Enjoy the mysterious night!
           </p>
         </div>
-        <img
+        <!-- <img
           src="img/comsoc-offer-removebg-preview (1).png"
           alt="footer image"
           class="footer__tree-1"
-        />
+        /> -->
         <img
           src="img/footer-tree2.png"
           alt="footer image"
@@ -252,6 +320,115 @@
       <i class="ri-arrow-up-line"></i>
     </a>
     <script src="scrollreveal.js"></script>
+    <!-- <script src="script.js"></script> -->
     <script src="main.js"></script>
+    <script>
+      const popupOverlay = document.getElementById('popupOverlay');
+      const popup = document.getElementById('popup');
+      const closePopup = document.getElementById('closePopup');
+      const emailInput = document.getElementById('emailInput');
+      const desiredRoleInput = document.getElementById('desiredRoleInput');
+
+      // Function to open the popup
+      function openPopup({value}) {
+          popupOverlay.style.display = 'block';
+          desiredRoleInput.value = value;
+      }
+
+      // Function to close the popup
+      function closePopupFunc() {
+          popupOverlay.style.display = 'none';
+          desiredRoleInput.value = '';
+      }
+
+      // Function to submit the signup form
+      function submitForm() {
+          const email = emailInput.value;
+          // Add your form submission logic here
+          console.log(`Email submitted: ${email}`);
+          closePopupFunc(); // Close the popup after form submission
+      }
+
+      // Event listeners
+      // Trigger the popup to open (you can call this function on a button click or any other event)
+      // openPopup();
+
+      // Close the popup when the close button is clicked
+      closePopup.addEventListener('click', closePopupFunc);
+
+      // Close the popup when clicking outside the popup content
+      popupOverlay.addEventListener('click', function (event) {
+          if (event.target === popupOverlay) {
+              closePopupFunc();
+          }
+      });
+
+      function toggleDiv() {
+        var radioYes = document.getElementById("yesRadio2");
+        var myDiv = document.getElementById("myDiv");
+
+        if (radioYes.checked) {
+            myDiv.style.display = "block"; // Show the div
+        } else {
+            myDiv.style.display = "none"; // Hide the div
+        }
+      }
+
+      // -----------
+
+      function updatePerformerInputValue() {
+        const inputElement = document.getElementById('myButton');
+        inputElement.value = "Performer"; // Call the function and assign its return
+      }
+
+      function getJuryValue() {
+        return "Jury";
+      }
+
+      function updateJuryInputValue() {
+        const inputElement = document.getElementById('myButton');
+        inputElement.value = getJuryValue(); // Call the function and assign its return
+      }
+
+      function getGhostValue() {
+        return "Ghost";
+      }
+
+      function updateGhostInputValue() {
+        const inputElement = document.getElementById('myButton');
+        inputElement.value = getGhostValue(); // Call the function and assign its return
+      }
+
+
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+        if (document.getElementById("myButton").value = "Performer"){
+          updatePerformerInputValue();
+        } else if (document.getElementById("myButton").value = "Jury") {
+          getJuryValue();
+          updateJuryInputValue();
+        } else if (document.getElementById("myButton").value = "Ghost") {
+          getGhostValue();
+          updateGhostInputValue();
+        }
+      }
+
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+        const inputElement = document.getElementById('myButton');
+        inputElement.value = "";
+      }
+
+      function onSubmit () {
+        if (document.getElementById("myButton").value = "Performer"){
+
+        } else if (document.getElementById("myButton").value = "Jury") {
+
+        } else if (document.getElementById("myButton").value = "Ghost") {
+
+        }
+      }
+
+      </script>
   </body>
 </html>
