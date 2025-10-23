@@ -1,26 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="img/dsu logo.png" type="image/x-icon" />
     <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>DSU</title>
+    <title>the Judian</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
   </head>
   <body>
     <img src="img/shape-bg.png" alt="" class="shape__bg" />
     <header class="header" id="header">
       <nav class="nav container">
         <a href="" class="nav__logo">
-          <img src="img/dsu logo.png" alt="logo image" />DSU
+          <img src="img/dsu logo.png" alt="logo image" />Judian Mystery
         </a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">Home</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#about" class="nav__link">About</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#roles" class="nav__link">Roles</a>
+            </li>
+          </ul>
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-line"></i>
+          </div>
+          <img src="img/pumpkin-header.png" alt="nav image" class="nav__img" />
+        </div>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-4-line"></i>
+        </div>
       </nav>
     </header>
+    <a href="countdown.html" class="count-down" style="color: white;">&#x1F551;</a>
     <main class="main">
       <section class="home section" id="home">
         <div class="shape__small"></div>
@@ -28,31 +54,343 @@
         <div class="home__container container grid">
           <div class="home__data">
             <h1 class="home__title">
-              <span>The Judian Mystery</span>
+              <span>the Judian Mystery</span>
               <span class="Deez">Murder, Mayheim, and Merry</span>
-              <img src="img/stars1.png" alt="home image" class="home__title-img-1" />
-              <img src="img/stars1.png" alt="home image" class="home__title-img-2" />
+              <img
+                src="img/stars1.png"
+                alt="home image"
+                class="home__title-img-1"
+              />
+              <img
+                src="img/stars1.png"
+                alt="home image"
+                class="home__title-img-2"
+              />
             </h1>
-            <p class="home__description">Sign in to join the event</p>
-            <div class="login-section">
-              <form action="home.html" method="get">
-                <label for="username">Enter Username</label>
-                <input type="text" id="username" name="username" class="button-1" required /><br />
-                <label for="password">Enter Password</label>
-                <input type="password" id="password" name="password" class="button-1" required /><br /><br />
-                <button type="submit" class="button">Login</button>
-              </form>
-              <br />
-              <p>
-                Don't have an account? <a href="signup.html" style="color: red;">Sign up</a>
-              </p>
-            </div>
-            <!-- <img src="img/jack o lantern.png" alt="home image" class="home__img floating-imgs" /> -->
+            <p class="home__description">
+              This November, enjoy solving a mystery with strangers and
+              spend a terrifying night under the waning crescent moon.
+            </p>
+            <!-- <a href="#roles" class="button">Venture</a> -->
+          </div>
+          <img
+            src="img/Rosary-Beads.png"
+            alt="home image"
+            class="home__img floating-imgs"
+          />
+          <img
+            src="img/Bloody_Knife.png"
+            alt="home image"
+            class="home__tree-1 mobile"
+          />
+          <img
+            src="img/body-chalk-outline.png"
+            alt="home image"
+            class="home__tree-2 mobile"
+          />
+        </div>
+      </section>
+      <section class="about section" id="about">
+        <div class="shape__small"></div>
+        <div class="shape__big"></div>
+        <div class="about__container container grid">
+          <div class="about__data">
+            <h2 class="section__title">
+              About the Night <br />
+              of Terror
+            </h2>
+            <p class="about__description">
+              Monotony and ice tea, in the town of Jasper, Georgia, everything and everyone prays to Gold, God and Glory. One road, one school, one church.
+              From the plush community of Bent Tree to the Pauper’s Home of Pickens County, all congregate at the Mountain View Community Church to give thanks. That is, until, one glorious Sunday, the town people bow their head in prayer and unravel the mystery in their wake. 
+
+            </p>
+            <!-- <a href="#category" class="button">Know More</a> -->
+          </div>
+          <img src="img/Steampunk_Hat.png" alt="about image" class="about__img mobile" />
+        </div>
+      </section>
+      <section id="roles" class="category section">
+        <div class="shape__small"></div>
+        <h2 class="section__title">
+          Choose your <br />
+          Role Category
+        </h2>
+        <div class="category__container container grid">
+          <div class="category__card">
+            <img
+              src="img/actor.png"
+              alt="category image"
+              class="category__img floating-imgs"
+            />
+            <h3 class="category__title">Performer</h3>
+            <p class="category__description">
+              Light up the room by acting out as a character!
+            </p>
+            <img src="img/stars.png" alt="" class="category__star" />
+            <button class="items__button" onclick="openPopup({value: 'Performer'})" value="Performer">Register</button>
+          </div>
+          <div class="category__card">
+            <img
+              src="img/jury.png"
+              alt="category image"
+              class="category__img floating-imgs"
+            />
+            <h3 class="category__title">Jury</h3>
+            <p class="category__description">
+              No role but able to question and interrogate the performers during interrogation.
+            </p>
+            <img src="img/stars.png" alt="" class="category__star" />
+            <button class="items__button" onclick="openPopup({value: 'Jury'})" value="Jury">Register</button>
+          </div>
+          <div class="category__card">
+            <img
+              src="img/ghosty.png"
+              alt="category image"
+              class="category__img floating-imgs"
+            />
+            <h3 class="category__title">Ghost</h3>
+            <p class="category__description">
+              A non-participant watching the event unfold.
+            </p>
+            <img src="img/stars.png" alt="" class="category__star" />
+            <button class="items__button" onclick="openPopup({value: 'Ghost'})" value="Ghost">Register</button>
           </div>
         </div>
       </section>
+
+      <div class="popup-overlay" id="popupOverlay">
+        <div class="form-container" id="popup">
+          <span class="close" id="closePopup">&times;</span>
+          <h4 class="text-center mb-4">RSVP for the Judian Murder Mystery Event</h4>
+          <form id="submit-to-google-sheet">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input
+                class="form-control"
+                type="text"
+                name="name"
+                id="name"
+                placeholder="First and Last Name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="phone">Contact Number:</label>
+              <input
+                class="form-control"
+                type="tel"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                name="contact_number"
+                id="contact_number"
+                placeholder="XXX-XXX-XXXX"
+                title="Please enter a 10-digit phone number in the format XXX-XXX-XXXX"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Desired Role:</label>
+              <input
+                class="form-control"
+                type="text"
+                name="role"
+                id="desiredRoleInput"
+                disabled
+              />
+            </div>
+
+            <div class="form-group form-check mt-2" id="randomCheck" style="display: none;">
+              <input class="form-check-input" type="checkbox" id="random"/>
+              <label class="form-check-label" for="random"
+                >By checking this box, you understand roles are assigned by random draw. You are not guaranteed a role.</label
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="loc">RSVP for Nov 16th?:</label>
+              <select class="form-control" name="rsvp" id="rsvp" required>
+                <option value="" disabled selected hidden>Choose...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="loc">Food Accomodations:</label>
+              <select class="form-control" name="food" id="food" required>
+                <option value="" disabled selected hidden>Choose...</option>
+                <option value="restaurant">Order a-la-carte from restaurant menu</option>
+                <option value="potluck">Participate in a potluck</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="loc">Wish to Receive a Physical Invitation?:</label>
+              <select class="form-control" name="invitation" id="invitation" required>
+                <option value="" disabled selected hidden>Choose...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+
+            <div id="receiveInvite" style="display: none;">
+              <label for="loc">Enter your full address:</label>
+              <input
+                class="form-control"
+                type="text"
+                name="address"
+                id="address"
+                placeholder="Mailing Address"
+              />
+              <div class="form-group form-check">
+                <input class="form-check-input" type="checkbox" id="ex" />
+                <label class="form-check-label" for="ex"
+                  >By checking this box I understand my address will not be shared but used for sending cute invites!
+                </label>
+              </div>
+            </div>
+            
+
+            <div class="form-group">
+              <label for="loc">Any additional comments:</label>
+              <textarea
+                class="form-control"
+                name="message"
+                id="message"
+                placeholder="Message"
+              ></textarea>
+            
+            <br/>
+            <button type="submit" onsubmit="submitForm()" class="btn btn-primary btn-block">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
     </main>
+
+    <footer class="footer section">
+      <div class="footer__container container grid">
+        <div class="shape__small"></div>
+        <div class="shape__big"></div>
+        <div>
+          <a href="" class="footer__logo">
+            <img src="img/dsu logo.png" alt="logo image" />Judian Mystery
+          </a>
+          <p class="footer__description">
+            Enjoy the mysterious night!
+          </p>
+        </div>
+        <!-- <img
+          src="img/comsoc-offer-removebg-preview (1).png"
+          alt="footer image"
+          class="footer__tree-1"
+        /> -->
+        <img
+          src="img/footer-tree2.png"
+          alt="footer image"
+          class="footer__tree-2"
+        />
+      </div>
+      <span class="footer__copy">
+        &#169; Copyright hehe. All Rights Not Reserved
+      </span>
+    </footer>
+
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-line"></i>
+    </a>
     <script src="scrollreveal.js"></script>
+    <!-- <script src="script.js"></script> -->
     <script src="main.js"></script>
+    <script>
+      const popupOverlay = document.getElementById('popupOverlay');
+      const popup = document.getElementById('popup');
+      const closePopup = document.getElementById('closePopup');
+      const emailInput = document.getElementById('emailInput');
+      const desiredRoleInput = document.getElementById('desiredRoleInput');
+      const randomAcknowledgement = document.getElementById('randomCheck');
+      const receiveInvite = document.getElementById('invitation');
+      const showReceiveInvite = document.getElementById('receiveInvite');
+
+      // Function to open the popup
+      function openPopup({value}) {
+        document.body.classList.add('openPopup');
+          popupOverlay.style.display = 'block';
+          desiredRoleInput.value = value;
+          if (value == "Performer") {
+            randomAcknowledgement.style.display = 'block';
+          }
+      }
+
+      // Function to close the popup
+      function closePopupFunc() {
+        document.body.classList.remove('openPopup');
+          popupOverlay.style.display = 'none';
+          randomAcknowledgement.style.display = 'none';
+          desiredRoleInput.value = '';
+      }
+
+      // Event listeners
+      
+      // Function to check if user wants a physical invite
+      receiveInvite.addEventListener('change', function() {
+        showReceiveInvite.style.display = 'none';
+
+        if (this.value === 'yes') {
+            showReceiveInvite.style.display = 'block';
+        } else {
+            showReceiveInvite.style.display = 'none';
+        }
+      });
+      // Close the popup when the close button is clicked
+      closePopup.addEventListener('click', closePopupFunc);
+
+      // Close the popup when clicking outside the popup content
+      popupOverlay.addEventListener('click', function (event) {
+          if (event.target === popupOverlay) {
+              closePopupFunc();
+          }
+      });
+    </script>
+
+    <script>
+      const scriptURL =                       
+      "https://script.google.com/macros/s/AKfycbxr0j1-fY0EXFyFI0rXZY-Gb8BEwBo8hega-coJwAcOPLCZKfOV1E08wmvEgarJMwFD/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        var formData = new FormData(form);
+        var role = document.getElementById("desiredRoleInput").value;
+        var ex = document.getElementById("ex").checked;
+        var random = document.getElementById("random").checked;
+
+        if (role == "Performer") {
+          formData.append("role", "Performer");
+        } else if (role == "Jury") {
+          formData.append("role", "Jury");
+        } else {
+          formData.append("role", "Ghost");
+        }
+        if (random) {
+          formData.append("random", "Yes");
+        } else {
+          formData.append("random", "No");
+        }
+        if (ex) {
+          formData.append("share_address", "Yes");
+        } else {
+          formData.append("share_address", "No");
+        }
+
+        fetch(scriptURL, { method: "POST", body: formData })
+          .then((response) => {
+            swal("Done", "Submitted Successfully.", "success");
+          })
+          .catch((error) => {
+            swal("Error", "Something went wrong. please try again!", "error");
+          });
+          
+          // Function to submit the signup form
+          closePopupFunc();
+      });
+    </script>
   </body>
 </html>
