@@ -133,7 +133,8 @@ img {
 .header{
   position: fixed;
   width: 100%;
-  background: rgb(144, 10, 0);
+  background: rgba(144, 10, 0, 0.2);
+  /* background: rgb(144, 10, 0); */
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
